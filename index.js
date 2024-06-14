@@ -15,15 +15,11 @@ app.set("view engine", "ejs")
 app.set("views", __dirname + "/view")   
 app.set(express.static("public"))
 
-
-
 app.get("/",(req,res)=>{
     res.render(index)
 })
 
-
 app.use("/user", userRoute);
-
 
 app.listen(port, () => {
     console.log("Server is running up to 8090");
